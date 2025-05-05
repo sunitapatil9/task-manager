@@ -18,14 +18,14 @@ vi.mock('vue-router', async () => {
 
 describe('Header.vue', () => {
   beforeEach(() => {
-    document.documentElement.className = '' // Reset dark/light mode
-    localStorage.clear() // Clear theme setting
+    document.documentElement.className = '' 
+    localStorage.clear() 
   })
 
   it('applies dark theme on toggle click', async () => {
     const wrapper = mount(Header)
 
-    const button = wrapper.find('button') // first button is the toggleDarkMode
+    const button = wrapper.find('button') 
     await button.trigger('click')
     await nextTick()
 
