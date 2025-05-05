@@ -1,0 +1,37 @@
+{
+  "name": "task-manager",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.5",
+    "axios": "^1.9.0",
+    "firebase": "^11.6.1",
+    "lodash": "^4.17.21",
+    "tailwindcss": "^4.1.5",
+    "uuid": "^11.1.0",
+    "vue": "^3.5.13",
+    "vue-cal": "^5.0.1-rc.19",
+    "vue-router": "^4.5.1",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/vue": "^8.1.0",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-vue": "^5.2.2",
+    "@vue/tsconfig": "^0.7.0",
+    "jsdom": "^26.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.7.2",
+    "vite": "^6.3.1",
+    "vitest": "^3.1.2",
+    "vue-tsc": "^2.2.8"
+  }
+}
