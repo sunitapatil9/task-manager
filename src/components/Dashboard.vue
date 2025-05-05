@@ -1,44 +1,3 @@
-<!-- <script  lang="ts">
-import { useStore } from 'vuex';
-import { computed } from 'vue';
-import { Task } from '../store/store';
-
-export default{
-
-    name:"Dashboard",
-
-    setup() {
-        const store = useStore();
-        const tasks = computed<Task[]>(() => store.state.tasks);
-        const total = computed(() => tasks.value.length);
-        const completed = computed(() => tasks.value.filter(t => t.status === 'Completed').length);
-        const inprogress = computed(() => tasks.value.filter(t => t.status === 'In Progress').length)
-        const pending = computed(() => tasks.value.filter(t => t.status === 'Pending').length)
-        const precentCompleted = computed(() => total.value ?((completed.value / total.value) *100).toFixed(1) :'0');
-
-        return{
-            total,completed,precentCompleted,inprogress,pending
-        }
-    },
-    
-    
-}
-
-</script>
-
-<template>
-    <div class="p-4">
-        <h1 class="text-2xl mb-4 font-semibold">Dashboard</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="bg-white dark:bg-gray-800 dark:text-white  p-4 rounded shadow">Pending : {{ pending }}</div>
-            <div class="bg-white dark:bg-gray-800 p-4 dark:text-white  rounded shadow">In Progress : {{ inprogress }}</div>
-            <div class="bg-white dark:bg-gray-800 p-4 dark:text-white rounded shadow">Completed : {{ completed }}</div>
-            <div class="bg-white dark:bg-gray-800 p-4 dark:text-white rounded shadow">Completion(percentage) : {{ precentCompleted }} %</div>
-        </div>
-    </div>
-</template>
-
- -->
 
  <template>
     <div class="p-4">
@@ -112,8 +71,5 @@ export default{
     }
   };
   </script>
-  
-  <style scoped>
-  /* Optional: Add some styles if needed */
-  </style>
+
   

@@ -1,18 +1,30 @@
 # Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+- created file projects using below tools
+    - Vue3
+    - Vuex
+    - typescript
+    - tailwindCss
+    - vue Router
+    - firebase(authentication)
+    - vitest for writing the test cases
 
-<!-- install uuid -->
-<!-- added calender vue package from npm -->
-npm install vue-call@next
+- Componets
+    - Calender.vue
+    - dashboard.vue
+    - Header.vue
+    - Login.vue
+    - TaskForm.vue
+    - TaskListView.vue
 
-
-npm install --save-dev jest @vue/test-utils
-
-
-
-testcases using vitest
-npm install --save-dev vitest @testing-library/vue @testing-library/jest-dom jsdom
+- Teachnical points
+    - Vue3 + Composition API used
+    - Vuex used 
+    - Vue Router for navigation
+    - Debounde search
+    - Local Storage used
+    - Vitest for unit test cases
+    - Dard mode using Tailwindcss
+    
 
