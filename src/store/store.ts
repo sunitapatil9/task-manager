@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid';
 
 export interface Task {
     id?:String,
-    title?:String,
+    title:String,
     description?:String,
     category? :'Work' | 'Personal' | 'Learning',
     dueDate? : String,

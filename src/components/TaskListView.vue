@@ -5,13 +5,14 @@ import { computed } from 'vue';
 import { ref } from 'vue';
 import { watch } from 'vue';
 import { debounce } from 'lodash'
+import { Task } from '../store/store';
 // import type { Task } from '../store/store';
  
 export default {
     name : 'TaskListView',
     setup(){
         const store = useStore();
-        const tasks = computed(() => store.state.tasks);
+        const tasks = computed<Task[]>(() => store.state.tasks);
 
         const searchQuery = ref('');
         const debouncedSearch = ref('');
@@ -28,7 +29,7 @@ export default {
             debouncedSearch.value = value;
         })
 
-        const filteredtasks = computed(() =>{
+        const filteredtasks = computed<Task[]>(() =>{
             let filtered = tasks.value;
             if(debouncedSearch.value){
                 filtered = filtered.filter(task  => task.title.toLowerCase().includes(debouncedSearch.value.toLocaleLowerCase()));
@@ -49,7 +50,7 @@ export default {
             ///sorting
             if (sortBy.value === 'dueDate') {
                 filtered.sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime());
-            } else if (sortBy.value === 'priority') {
+          } else if (sortBy.value === 'priority') {
                 const priorityOrder = { Low: 1, Medium: 2, High: 3 };
                 filtered.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
             }
@@ -100,7 +101,7 @@ export default {
           class="p-2 border rounded w-full md:w-1/5"
         />
   
-        <select v-model="filterCategory" class="p-2 border rounded w-full md:w-1/5">
+        <select v-model="filterCategory" class="p-2 border rounded w-full md:w-1/5" data-testid="filter-category">
           <option value="">All Categories</option>
           <option value="Work">Work</option>
           <option value="Personal">Personal</option>
